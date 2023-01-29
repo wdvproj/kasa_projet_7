@@ -1,15 +1,24 @@
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    &:link {
+        color: inherit;
+    }
+    &:visited {
+        color: #ff6060;
+    }
+`
 function Logement() {
     return (
         <div>
             <Header>
-                <Link to="/">Accueil</Link>
-                <Link to="/about">A Propos</Link>
+                <StyledLink to="/">Accueil</StyledLink>
+                <StyledLink to="/about">A Propos</StyledLink>
             </Header>
-            Logement
             <Footer />
         </div>
     )
