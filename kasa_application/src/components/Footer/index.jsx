@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
 `
 const FooterContent = styled.p`
     margin: 0px;
+    margin-top: 25px;
     line-height: 34px;
 `
 
