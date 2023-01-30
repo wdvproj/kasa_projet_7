@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import Wrapper from '../../components/Wrapper'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
@@ -40,7 +41,7 @@ const StyledBackLink = styled(StyledLink)`
 
 function Error() {
     return (
-        <div>
+        <Wrapper>
             <Header>
                 <StyledLink to="/">Accueil</StyledLink>
                 <StyledLink to="/about">A Propos</StyledLink>
@@ -55,7 +56,7 @@ function Error() {
                 </StyledBackLink>
             </ErrorContainer>
             <Footer />
-        </div>
+        </Wrapper>
     )
 }
 
