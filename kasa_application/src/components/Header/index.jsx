@@ -5,8 +5,6 @@ const HeaderContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
-    padding-bottom: 0px;
 `
 const LinkContainer = styled.div`
     display: flex;
