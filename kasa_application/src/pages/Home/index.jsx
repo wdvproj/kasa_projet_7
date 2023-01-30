@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import Wrapper from '../../components/Wrapper'
 import Header from '../../components/Header'
 import Card from '../../components/Card'
 import Footer from '../../components/Footer'
@@ -28,6 +29,7 @@ const Banner = styled.div`
     position: relative;
     margin: 25px 0px;
 `
+
 const Image = styled.img`
     position: relative;
     width: 100%;
@@ -36,7 +38,7 @@ const Image = styled.img`
 
 const Title = styled.h1`
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 0px;
     z-index: 1;
     width: 100%;
@@ -46,7 +48,7 @@ const Title = styled.h1`
     line-height: 68px;
 `
 
-const Gallery = styled.section`
+const Cards = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -58,24 +60,29 @@ const Gallery = styled.section`
 
 function Home() {
     return (
-        <div>
+        <Wrapper>
             <Header>
                 <StyledHomeLink to="/">Accueil</StyledHomeLink>
                 <StyledLink to="/about">A Propos</StyledLink>
             </Header>
             <HomeContainer>
                 <Banner>
-                    <Image src={photo} alt="landscape background" />
+                    <Image
+                        src={photo}
+                        alt="Photo d'un paysage en arrière-plan du titre"
+                    />
                     <Title>Chez vous, partout et ailleurs</Title>
                 </Banner>
-                <Gallery>
+                <Cards>
                     {logements.map(({ id, title }) => (
-                        <Card id={id} title={title} />
+                        <StyledLink to={`/logement/${id}`}>
+                            <Card id={id} title={title} />
+                        </StyledLink>
                     ))}
-                </Gallery>
+                </Cards>
             </HomeContainer>
             <Footer />
-        </div>
+        </Wrapper>
     )
 }
 
