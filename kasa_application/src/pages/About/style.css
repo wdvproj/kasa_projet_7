@@ -1,0 +1,9 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about__sections {
+    margin: 10px 100px;
+}

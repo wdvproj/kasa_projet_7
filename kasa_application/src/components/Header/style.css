@@ -1,0 +1,25 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.top__link {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.top__link > a {
+    text-decoration: none;
+}
+
+.top__link > a:link {
+    color: inherit;
+}
+
+.top__link > a:visited {
+    color: #ff6060;
+}

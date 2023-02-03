@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/font/Montserrat-Bold.ttf');
+    font-weight: 700;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.error__title {
+    margin: 50px 0px;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 411px;
+}
+
+.error__content {
+    margin: 0px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 51px;
+}
+
+.error > a {
+    margin: 80px 0px;
+    text-decoration: underline;
+}
+
+.error > a:link {
+    color: inherit;
+}
+
+.error > a:visited {
+    color: #ff6060;
+}

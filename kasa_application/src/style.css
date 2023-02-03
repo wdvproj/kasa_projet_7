@@ -1,11 +1,14 @@
 @font-face {
-    font-family: 'Montserra';
+    font-family: 'Montserrat';
     src: url('./assets/font/Montserrat-Medium.ttf');
     font-weight: 500;
 }
 
-@font-face {
-    font-family: 'Montserra';
-    src: url('./assets/font/Montserrat-Regular.ttf');
-    font-weight: 400;
+body {
+    color: #ff6060;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    font-family: 'Montserrat', sans-serif;
 }

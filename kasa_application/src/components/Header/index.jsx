@@ -1,23 +1,31 @@
-import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
+import './style.css'
 import logo from '../../assets/images/logo_red.svg'
 
-const HeaderContainer = styled.nav`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-const LinkContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-`
-
-function Header({ children }) {
+function Header() {
+    let activeStyle = { textDecoration: 'underline' }
     return (
-        <HeaderContainer>
-            <img src={logo} alt="logo of Kasa" />
-            <LinkContainer>{children}</LinkContainer>
-        </HeaderContainer>
+        <nav className="top">
+            <img className="top__picture" src={logo} alt="logo de Kasa" />
+            <div className="top__link">
+                <NavLink
+                    to="/"
+                    style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                >
+                    Accueil
+                </NavLink>
+                <NavLink
+                    to="/about"
+                    style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                >
+                    A Propos
+                </NavLink>
+            </div>
+        </nav>
     )
 }
 

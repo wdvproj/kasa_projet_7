@@ -1,11 +1,7 @@
-import styled from 'styled-components'
-
-const Container = styled.div`
-    margin: 0px 50px;
-`
+import './style.css'
 
 function Wrapper({ children }) {
-    return <Container>{children}</Container>
+    return <div className="wrapper">{children}</div>
 }
 
 export default Wrapper

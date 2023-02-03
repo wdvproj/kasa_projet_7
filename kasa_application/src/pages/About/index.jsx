@@ -1,67 +1,38 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Wrapper from '../../components/Wrapper'
-import Header from '../../components/Header'
+import './style.css'
+import Layout from '../../components/Layout'
+import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-import Footer from '../../components/Footer'
 import photo from '../../assets/images/background_landscape_2.jpg'
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    &:link {
-        color: inherit;
-    }
-    &:visited {
-        color: #ff6060;
-    }
-`
-
-const StyledAboutLink = styled(StyledLink)`
-    text-decoration: underline;
-`
-
-const AboutContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-const Banner = styled.div`
-    position: relative;
-    margin: 25px 0px;
-`
-
-const Image = styled.img`
-    position: relative;
-    width: 100%;
-    border-radius: 25px;
-`
-const Collapses = styled.div`
-    margin: 10px 100px;
-`
 
 function About() {
     const sections = [
-        { title: 'Fiabilité', description: '' },
+        {
+            title: 'Fiabilité',
+            description:
+                'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
+        },
         {
             title: 'Respect',
             description:
                 'La bienveillance fait partie des valeurs fondatrices de Kase. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
         },
-        { title: 'Service', description: '' },
-        { title: 'Responsabilité', description: '' },
+        {
+            title: 'Service',
+            description:
+                "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+        },
+        {
+            title: 'Responsabilité',
+            description:
+                "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
+        },
     ]
 
     return (
-        <Wrapper>
-            <Header>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledAboutLink to="/about">A Propos</StyledAboutLink>
-            </Header>
-            <AboutContainer>
-                <Banner>
-                    <Image src={photo} alt="Photo d'un paysage" />
-                </Banner>
-                <Collapses>
+        <Layout>
+            <div className="about">
+                <Banner picture={photo} />
+                <div className="about__sections">
                     {sections.map(({ title, description }, index) => (
                         <Collapse
                             id={`${title}-${index}`}
@@ -69,10 +40,9 @@ function About() {
                             description={description}
                         />
                     ))}
-                </Collapses>
-            </AboutContainer>
-            <Footer />
-        </Wrapper>
+                </div>
+            </div>
+        </Layout>
     )
 }
 

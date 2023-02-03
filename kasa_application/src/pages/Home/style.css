@@ -1,0 +1,53 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 25px 0px;
+}
+
+.home__banner > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 68px;
+}
+
+.home__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 0px;
+    margin: 20px 0px;
+    border-radius: 25px;
+    background-color: #f7f7f7;
+    color: #ffffff;
+}
+
+.home__cards > a {
+    display: flex;
+    text-decoration: none;
+}
+
+.home__cards > a:link {
+    color: inherit;
+}
+
+.home__cards > a:visited {
+    color: #ffffff;
+}
