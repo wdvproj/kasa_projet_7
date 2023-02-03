@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './style.css'
 import Layout from '../../components/Layout'
 import Gallery from '../../components/Gallery'
@@ -14,15 +14,22 @@ function Logement() {
     const logements = useContext(DatasContext)
     const [logement, setLogement] = useState({})
     const [isLogement, setIsLogement] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
+        let knownId
+
         for (let logement of logements) {
             if (logement.id === logementId) {
+                knownId = true
                 setLogement(logement)
                 setIsLogement(true)
             }
         }
-    }, [logementId, logements])
+        if (!knownId) {
+            navigate('/error')
+        }
+    }, [logementId, logements, navigate])
 
     return (
         isLogement && (
