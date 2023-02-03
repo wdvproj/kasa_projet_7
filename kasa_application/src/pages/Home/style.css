@@ -51,3 +51,32 @@
 .home__cards > a:visited {
     color: #ffffff;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .home__banner {
+        margin: 15px 0px;
+    }
+
+    .home__banner > div {
+        height: 111px;
+    }
+
+    .home__banner > h1 {
+        padding-left: 5%;
+        text-align: left;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .home__cards {
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+        background-color: #ffffff;
+    }
+
+    .home__cards > a {
+        width: 100%;
+    }
+}

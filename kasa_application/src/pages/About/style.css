@@ -7,3 +7,10 @@
 .about__sections {
     margin: 10px 100px;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .about__sections {
+        margin: 10px 0px;
+    }
+}

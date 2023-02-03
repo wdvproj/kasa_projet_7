@@ -14,3 +14,11 @@
     margin-top: 25px;
     line-height: 34px;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .bottom__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

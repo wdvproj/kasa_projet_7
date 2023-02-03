@@ -31,3 +31,18 @@
     background-color: #f7f7f7;
     font-weight: 400;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .section__title {
+        padding: 5px 10px 5px 10px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .section__content {
+        height: 143px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

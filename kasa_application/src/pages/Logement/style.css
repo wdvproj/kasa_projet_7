@@ -65,3 +65,43 @@
 .logement__secondary-information li {
     list-style: none;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .logement__primary-information {
+        flex-direction: column;
+    }
+
+    .logement__primary-information h1 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .logement__primary-information p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .logement__primary-information > div {
+        width: 100%;
+    }
+
+    .logement__primary-information > div:nth-child(2) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logement__secondary-information {
+        flex-direction: column;
+    }
+
+    .logement__secondary-information > section {
+        width: 100%;
+    }
+
+    .logement__secondary-information > section > p {
+        height: fit-content;
+        padding-bottom: 0px;
+    }
+}

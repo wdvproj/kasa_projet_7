@@ -23,3 +23,26 @@
 .top__link > a:visited {
     color: #ff6060;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .top {
+        margin-top: 5px;
+    }
+
+    .top__link {
+        width: 40%;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .top__picture {
+        width: 40%;
+    }
+
+    .top__link > a {
+        padding: 0px 5px;
+        text-align: center;
+    }
+}

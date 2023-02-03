@@ -17,3 +17,17 @@
     margin-left: 15px;
     border-radius: 100%;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .host__name {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .host__picture {
+        margin-left: 5px;
+        width: 32px;
+        height: 32px;
+    }
+}

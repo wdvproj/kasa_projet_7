@@ -14,3 +14,13 @@
     line-height: 20px;
     white-space: nowrap;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .tag {
+        width: 10%;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 14px;
+    }
+}

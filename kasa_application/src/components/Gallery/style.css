@@ -36,3 +36,22 @@
     font-size: 18px;
     line-height: 26px;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .gallery__button {
+        font-size: 1em;
+    }
+
+    .gallery__button--left {
+        padding-left: 5px;
+    }
+
+    .gallery__button--right {
+        padding-right: 5px;
+    }
+
+    .gallery__pages {
+        display: none;
+    }
+}

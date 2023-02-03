@@ -27,3 +27,14 @@
 .card__title {
     width: 45%;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        height: 300px;
+        margin: 0px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}

@@ -7,3 +7,11 @@
     width: 30px;
     height: 30px;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .rating__picture {
+        width: 15px;
+        height: 15px;
+    }
+}

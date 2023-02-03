@@ -39,3 +39,23 @@
 .error > a:visited {
     color: #ff6060;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .error__title {
+        margin-top: 100px;
+        margin-bottom: 0px;
+        font-size: 96px;
+        line-height: 137px;
+    }
+
+    .error__content {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .error > a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
