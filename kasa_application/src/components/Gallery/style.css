@@ -1,0 +1,38 @@
+.gallery {
+    position: relative;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.gallery__picture {
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.gallery__button {
+    position: absolute;
+    top: 40%;
+    color: #ffffff;
+    font-size: 3em;
+}
+
+.gallery__button--left {
+    left: 0%;
+    padding-left: 50px;
+}
+
+.gallery__button--right {
+    right: 0%;
+    padding-right: 50px;
+}
+
+.gallery__pages {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    padding-bottom: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 26px;
+}
