@@ -1,27 +1,8 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import './style.css'
+import Layout from '../../components/Layout'
 
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    &:link {
-        color: inherit;
-    }
-    &:visited {
-        color: #ff6060;
-    }
-`
 function Logement() {
-    return (
-        <div>
-            <Header>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/about">A Propos</StyledLink>
-            </Header>
-            <Footer />
-        </div>
-    )
+    return <Layout></Layout>
 }
 
 export default Logement
