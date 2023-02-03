@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import './style.css'
 import Layout from '../../components/Layout'
@@ -7,10 +7,11 @@ import Tag from '../../components/Tag'
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
-import logements from '../../datas/logements.json'
+import { DatasContext } from '../../utils/context'
 
 function Logement() {
     let { logementId } = useParams()
+    const logements = useContext(DatasContext)
     const [logement, setLogement] = useState({})
     const [isLogement, setIsLogement] = useState(false)
 
@@ -21,7 +22,7 @@ function Logement() {
                 setIsLogement(true)
             }
         }
-    }, [logementId])
+    }, [logementId, logements])
 
     return (
         isLogement && (
