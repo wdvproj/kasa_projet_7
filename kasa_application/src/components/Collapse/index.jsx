@@ -1,28 +1,27 @@
 import { useState } from 'react'
 import './style.css'
+import chevronDown from '../../assets/images/chevron_down.svg'
+import chevronUp from '../../assets/images/chevron_up.svg'
 
 function Collapse({ id, title, description }) {
     const [isCollapseOpen, openCollapse] = useState(false)
 
     return isCollapseOpen ? (
-        <section className="section" key={id}>
-            <h2 className="section__title">
+        <section className="section">
+            <h2 className="section__title" onClick={() => openCollapse(false)}>
                 {title}
 
-                <span onClick={() => openCollapse(false)}>
-                    <i class="fa-solid fa-chevron-up"></i>
-                </span>
+                <img src={chevronUp} alt="Fermer le contenu" />
             </h2>
+
             <p className="section__content">{description}</p>
         </section>
     ) : (
-        <section className="section" key={id}>
-            <h2 className="section__title">
+        <section className="section">
+            <h2 className="section__title" onClick={() => openCollapse(true)}>
                 {title}
 
-                <span onClick={() => openCollapse(true)}>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </span>
+                <img src={chevronDown} alt="Ouvrir le contenu" />
             </h2>
         </section>
     )

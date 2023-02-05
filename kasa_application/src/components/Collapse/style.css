@@ -20,10 +20,6 @@
     font: inherit;
 }
 
-.section__title > span {
-    color: #ffffff;
-}
-
 .section__content {
     padding: 20px 10px;
     margin: 0px;

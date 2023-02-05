@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './style.css'
+import chevronLeft from '../../assets/images/chevron_left.svg'
+import chevronRight from '../../assets/images/chevron_right.svg'
 
 function Gallery({ pictures }) {
     const [picture, displayNextPicture] = useState(0)
@@ -27,7 +29,7 @@ function Gallery({ pictures }) {
                         : displayNextPicture(picture - 1)
                 }
             >
-                <i class="fa-solid fa-chevron-left"></i>
+                <img src={chevronLeft} alt="Page précédente" />
             </span>
             <img
                 className="gallery__picture"
@@ -43,7 +45,7 @@ function Gallery({ pictures }) {
                         : displayNextPicture(picture + 1)
                 }
             >
-                <i class="fa-solid fa-chevron-right"></i>
+                <img src={chevronRight} alt="Page suivante" />
             </span>
         </div>
     )

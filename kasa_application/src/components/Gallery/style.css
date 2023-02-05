@@ -13,18 +13,21 @@
 .gallery__button {
     position: absolute;
     top: 40%;
-    color: #ffffff;
-    font-size: 3em;
+}
+
+.gallery__button > img {
+    width: 47px;
+    height: 79px;
 }
 
 .gallery__button--left {
     left: 0%;
-    padding-left: 50px;
+    padding-left: 35px;
 }
 
 .gallery__button--right {
     right: 0%;
-    padding-right: 50px;
+    padding-right: 35px;
 }
 
 .gallery__pages {
@@ -40,7 +43,12 @@
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
     .gallery__button {
-        font-size: 1em;
+        top: 45%;
+    }
+
+    .gallery__button > img {
+        width: 12px;
+        height: 20px;
     }
 
     .gallery__button--left {
