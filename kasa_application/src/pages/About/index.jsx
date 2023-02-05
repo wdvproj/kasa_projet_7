@@ -35,7 +35,7 @@ function About() {
                 <div className="about__sections">
                     {sections.map(({ title, description }, index) => (
                         <Collapse
-                            id={`${title}-${index}`}
+                            key={`${title}-${index}`}
                             title={title}
                             description={description}
                         />
