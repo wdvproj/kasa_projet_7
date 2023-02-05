@@ -12,7 +12,7 @@ function Home() {
 
     return (
         <Layout>
-            <div className="home">
+            <main className="home">
                 <div className="home__banner">
                     <Banner picture={photo} />
                     <h1>Chez vous, partout et ailleurs</h1>
@@ -24,7 +24,7 @@ function Home() {
                         </Link>
                     ))}
                 </section>
-            </div>
+            </main>
         </Layout>
     )
 }

@@ -30,7 +30,7 @@ function About() {
 
     return (
         <Layout>
-            <div className="about">
+            <main className="about">
                 <Banner picture={photo} />
                 <div className="about__sections">
                     {sections.map(({ title, description }, index) => (
@@ -41,7 +41,7 @@ function About() {
                         />
                     ))}
                 </div>
-            </div>
+            </main>
         </Layout>
     )
 }

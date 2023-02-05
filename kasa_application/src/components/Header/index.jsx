@@ -5,9 +5,9 @@ import logo from '../../assets/images/logo_red.svg'
 function Header() {
     let activeStyle = { textDecoration: 'underline' }
     return (
-        <nav className="top">
+        <header className="top">
             <img className="top__picture" src={logo} alt="logo de Kasa" />
-            <div className="top__link">
+            <nav className="top__link">
                 <NavLink
                     to="/"
                     style={({ isActive }) =>
@@ -24,8 +24,8 @@ function Header() {
                 >
                     A Propos
                 </NavLink>
-            </div>
-        </nav>
+            </nav>
+        </header>
     )
 }
 

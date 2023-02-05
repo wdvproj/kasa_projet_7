@@ -34,9 +34,9 @@ function Logement() {
     return (
         isLogement && (
             <Layout>
-                <section className="logement">
+                <main className="logement">
                     <Gallery pictures={logement.pictures} />
-                    <div className="logement__primary-information">
+                    <section className="logement__primary-information">
                         <div>
                             <h1>{logement.title}</h1>
                             <p>{logement.location}</p>
@@ -50,7 +50,7 @@ function Logement() {
                             <Host host={logement.host} />
                             <Rating rating={logement.rating} />
                         </div>
-                    </div>
+                    </section>
                     <div className="logement__secondary-information">
                         <Collapse
                             id={logementId}
@@ -73,7 +73,7 @@ function Logement() {
                             }
                         />
                     </div>
-                </section>
+                </main>
             </Layout>
         )
     )

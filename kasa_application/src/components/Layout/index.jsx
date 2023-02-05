@@ -1,14 +1,12 @@
-import Wrapper from '../Wrapper'
+import './style.css'
 import Header from '../Header'
 import Footer from '../Footer'
 
 function Layout({ children }) {
     return (
-        <div>
-            <Wrapper>
-                <Header />
-                {children}
-            </Wrapper>
+        <div className="layout">
+            <Header />
+            {children}
             <Footer />
         </div>
     )
