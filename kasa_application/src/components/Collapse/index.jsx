@@ -3,7 +3,7 @@ import './style.css'
 import chevronDown from '../../assets/images/chevron_down.svg'
 import chevronUp from '../../assets/images/chevron_up.svg'
 
-function Collapse({ id, title, description }) {
+function Collapse({ title, description }) {
     const [isCollapseOpen, openCollapse] = useState(false)
 
     return isCollapseOpen ? (
