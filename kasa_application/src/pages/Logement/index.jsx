@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useNavigate, useParams, useLoaderData } from 'react-router-dom'
 import './style.css'
 import Layout from '../../components/Layout'
 import Gallery from '../../components/Gallery'
@@ -7,18 +7,16 @@ import Tag from '../../components/Tag'
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
-import { DatasContext } from '../../utils/context'
 
 function Logement() {
     let { logementId } = useParams()
-    const logements = useContext(DatasContext)
+    const logements = useLoaderData()
     const [logement, setLogement] = useState({})
-    const [isLogement, setIsLogement] = useState(false)
+    const [isLogement, setIsLogement] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
         let knownId
-
         for (let logement of logements) {
             if (logement.id === logementId) {
                 knownId = true
@@ -27,7 +25,7 @@ function Logement() {
             }
         }
         if (!knownId) {
-            navigate('/error')
+            return navigate('/error') // Retour vers la page d'erreur
         }
     }, [logementId, logements, navigate])
 

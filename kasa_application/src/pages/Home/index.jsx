@@ -1,14 +1,12 @@
-import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import './style.css'
 import Layout from '../../components/Layout'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
-import { DatasContext } from '../../utils/context'
 import photo from '../../assets/images/background_landscape_1.jpg'
 
 function Home() {
-    const logements = useContext(DatasContext)
+    const logements = useLoaderData()
 
     return (
         <Layout>

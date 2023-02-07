@@ -1,18 +1,31 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '../../pages/Home'
 import About from '../../pages/About'
 import Logement from '../../pages/Logement'
 import Error from '../../pages/Error'
 
 function Router() {
-return (<BrowserRouter>
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/logement/:logementId" element={<Logement />} />
-        <Route path="*" element={<Error />} />
-    </Routes>
-</BrowserRouter>)
+    const router = createBrowserRouter([
+        {
+            path: '/',
+            element: <Home />,
+            loader: () => {
+                return fetch('../../../datas/logements.json')
+            },
+            errorElement: <Error />,
+        },
+        {
+            path: '/logement/:logementId',
+            element: <Logement />,
+            loader: () => {
+                return fetch('../../../datas/logements.json')
+            },
+            errorElement: <Error />,
+        },
+        { path: '/about', element: <About /> },
+        { path: '*', element: <Error /> },
+    ])
+    return <RouterProvider router={router} />
 }
 
 export default Router
