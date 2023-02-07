@@ -32,11 +32,15 @@ function Gallery({ pictures }) {
                 <img src={chevronLeft} alt="Page précédente" />
             </span>
             <img
+                data-testid="picture"
                 className="gallery__picture"
                 src={pictures[picture]}
-                alt="logement"
+                alt="Intérieur du logement"
             />
-            <span className="gallery__pages"></span>
+            <span
+                data-testid="numberOfPicture"
+                className="gallery__pages"
+            ></span>
             <span
                 className="gallery__button gallery__button--right"
                 onClick={() =>
