@@ -24,7 +24,7 @@ function Gallery({ pictures }) {
                         : displayNextPicture(picture - 1)
                 }
             >
-                <img src={chevronLeft} alt="Page précédente" />
+                <img src={chevronLeft} alt="Précédente" />
             </span>
             <img
                 data-testid="picture"
@@ -32,7 +32,7 @@ function Gallery({ pictures }) {
                 src={pictures[picture]}
                 alt="Intérieur du logement"
             />
-            <span data-testid="numberOfPicture" className="gallery__pages">
+            <span data-testid="numberOfPicture" className="gallery__pictures">
                 {`${picture + 1}/${pictures.length}`}
             </span>
             <span
@@ -43,7 +43,7 @@ function Gallery({ pictures }) {
                         : displayNextPicture(picture + 1)
                 }
             >
-                <img src={chevronRight} alt="Page suivante" />
+                <img src={chevronRight} alt="Suivante" />
             </span>
         </div>
     )

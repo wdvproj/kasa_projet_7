@@ -15,7 +15,7 @@ describe('Gallery', () => {
             />
         )
 
-        const chevronLeft = screen.getByAltText('Page précédente')
+        const chevronLeft = screen.getByAltText('Précédente')
         const picture = screen.getByTestId('picture')
         const numberOfPicture = screen.getByTestId('numberOfPicture')
         expect(picture.getAttribute('src')).toBe('image_1.jpg')
@@ -39,7 +39,7 @@ describe('Gallery', () => {
             />
         )
 
-        const chevronRight = screen.getByAltText('Page suivante')
+        const chevronRight = screen.getByAltText('Suivante')
         const picture = screen.getByTestId('picture')
         const numberOfPicture = screen.getByTestId('numberOfPicture')
         expect(picture.getAttribute('src')).toBe('image_1.jpg')
