@@ -19,6 +19,7 @@
 .gallery__button {
     position: absolute;
     top: 40%;
+    cursor: pointer;
 }
 
 .gallery__button > img {

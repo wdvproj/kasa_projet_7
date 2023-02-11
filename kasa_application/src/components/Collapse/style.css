@@ -20,6 +20,7 @@
     background-color: #ff6060;
     color: #ffffff;
     font: inherit;
+    cursor: pointer;
 }
 
 .section__content {
