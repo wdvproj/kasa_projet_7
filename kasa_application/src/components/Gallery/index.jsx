@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './style.css'
 import chevronLeft from '../../assets/images/chevron_left.svg'
 import chevronRight from '../../assets/images/chevron_right.svg'
 
 function Gallery({ pictures }) {
     const [picture, displayNextPicture] = useState(0)
-
-    useEffect(() => {
-        const numberOfPicture = document.querySelector('.gallery__pages')
-        numberOfPicture.textContent = `${picture + 1}/${pictures.length}`
-    }, [picture, pictures.length])
 
     return pictures.length === 1 ? (
         <div className="gallery">
@@ -37,10 +32,9 @@ function Gallery({ pictures }) {
                 src={pictures[picture]}
                 alt="Intérieur du logement"
             />
-            <span
-                data-testid="numberOfPicture"
-                className="gallery__pages"
-            ></span>
+            <span data-testid="numberOfPicture" className="gallery__pages">
+                {`${picture + 1}/${pictures.length}`}
+            </span>
             <span
                 className="gallery__button gallery__button--right"
                 onClick={() =>
