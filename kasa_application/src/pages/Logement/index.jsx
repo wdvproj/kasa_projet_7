@@ -13,7 +13,7 @@ function Logement() {
     let { logementId } = useParams()
     const logements = useLoaderData()
     const [logement, setLogement] = useState({})
-    const [isLogement, setIsLogement] = useState()
+    const [isLogement, setIsLogement] = useState(false)
     const navigate = useNavigate()
 
     useEffect(() => {
