@@ -53,17 +53,9 @@
     width: 47%;
 }
 
-.logement__secondary-information > section > p {
+.logement__secondary-information > section > ul {
     height: 249px;
     overflow: auto;
-}
-
-.logement__secondary-information ul {
-    padding: 0px;
-}
-
-.logement__secondary-information li {
-    list-style: none;
 }
 
 /* Responsive mobile */
@@ -100,8 +92,7 @@
         width: 100%;
     }
 
-    .logement__secondary-information > section > p {
+    .logement__secondary-information > section > ul {
         height: fit-content;
-        padding-bottom: 0px;
     }
 }

@@ -14,7 +14,11 @@ function Collapse({ title, description }) {
                 <img src={chevronUp} alt="Fermer le contenu" />
             </h2>
 
-            <p className="section__content">{description}</p>
+            <ul className="section__content">
+                {description.map((content, index) => (
+                    <li key={`${content.slice(0, 10)}-${index}`}>{content}</li>
+                ))}
+            </ul>
         </section>
     ) : (
         <section className="section">

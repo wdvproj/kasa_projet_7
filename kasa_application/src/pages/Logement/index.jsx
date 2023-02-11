@@ -53,22 +53,12 @@ function Logement() {
                         <Collapse
                             id={logementId}
                             title="Description"
-                            description={logement.description}
+                            description={logement.description.split()}
                         />
                         <Collapse
                             id={logementId}
                             title="Equipements"
-                            description={
-                                <ul>
-                                    {logement.equipments.map(
-                                        (equipment, index) => (
-                                            <li key={`${equipment}-${index}`}>
-                                                {equipment}
-                                            </li>
-                                        )
-                                    )}
-                                </ul>
-                            }
+                            description={logement.equipments}
                         />
                     </div>
                 </main>

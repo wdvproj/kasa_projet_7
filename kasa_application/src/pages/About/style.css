@@ -13,4 +13,8 @@
     .about__sections {
         margin: 10px 0px;
     }
+
+    .about__sections ul {
+        height: 143px;
+    }
 }

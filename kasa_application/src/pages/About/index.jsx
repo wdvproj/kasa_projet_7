@@ -37,7 +37,7 @@ function About() {
                         <Collapse
                             key={`${title}-${index}`}
                             title={title}
-                            description={description}
+                            description={description.split()}
                         />
                     ))}
                 </div>

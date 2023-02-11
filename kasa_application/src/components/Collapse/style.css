@@ -23,11 +23,12 @@
 }
 
 .section__content {
-    padding: 20px 10px;
+    padding: 30px 15px 0px 15px;
     margin: 0px;
     border-radius: 0px 0px 10px 10px;
     background-color: #f7f7f7;
     font-weight: 400;
+    list-style-type: none;
 }
 
 /* Responsive mobile */
@@ -41,7 +42,6 @@
     }
 
     .section__content {
-        height: 143px;
         border-radius: 0px 0px 5px 5px;
         font-size: 12px;
         line-height: 17px;
