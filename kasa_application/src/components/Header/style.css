@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0px 50px;
     margin-top: 25px;
 }
 
@@ -28,7 +27,6 @@
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
     .top {
-        padding: 0px 5px;
         margin-top: 5px;
     }
 
@@ -44,7 +42,6 @@
     }
 
     .top__link > a {
-        padding: 0px 5px;
         text-align: center;
     }
 }

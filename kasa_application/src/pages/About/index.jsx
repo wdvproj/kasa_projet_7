@@ -2,6 +2,7 @@ import './style.css'
 import Layout from '../../components/Layout'
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
+import Footer from '../../components/Footer'
 import photo from '../../assets/images/background_landscape_2.jpg'
 
 function About() {
@@ -29,20 +30,23 @@ function About() {
     ]
 
     return (
-        <Layout>
-            <main className="about">
-                <Banner picture={photo} />
-                <div className="about__sections">
-                    {sections.map(({ title, description }, index) => (
-                        <Collapse
-                            key={`${title}-${index}`}
-                            title={title}
-                            description={description.split()}
-                        />
-                    ))}
-                </div>
-            </main>
-        </Layout>
+        <div>
+            <Layout>
+                <main className="about">
+                    <Banner picture={photo} />
+                    <div className="about__sections">
+                        {sections.map(({ title, description }, index) => (
+                            <Collapse
+                                key={`${title}-${index}`}
+                                title={title}
+                                description={description.split()}
+                            />
+                        ))}
+                    </div>
+                </main>
+            </Layout>
+            <Footer />
+        </div>
     )
 }
 

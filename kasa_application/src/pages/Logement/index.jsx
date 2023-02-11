@@ -7,6 +7,7 @@ import Tag from '../../components/Tag'
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
+import Footer from '../../components/Footer'
 
 function Logement() {
     let { logementId } = useParams()
@@ -31,38 +32,44 @@ function Logement() {
 
     return (
         isLogement && (
-            <Layout>
-                <main className="logement">
-                    <Gallery pictures={logement.pictures} />
-                    <section className="logement__primary-information">
-                        <div>
-                            <h1>{logement.title}</h1>
-                            <p>{logement.location}</p>
+            <div>
+                <Layout>
+                    <main className="logement">
+                        <Gallery pictures={logement.pictures} />
+                        <section className="logement__primary-information">
                             <div>
-                                {logement.tags.map((tag, index) => (
-                                    <Tag key={`${tag}-${index}`} tag={tag} />
-                                ))}
+                                <h1>{logement.title}</h1>
+                                <p>{logement.location}</p>
+                                <div>
+                                    {logement.tags.map((tag, index) => (
+                                        <Tag
+                                            key={`${tag}-${index}`}
+                                            tag={tag}
+                                        />
+                                    ))}
+                                </div>
                             </div>
+                            <div>
+                                <Host host={logement.host} />
+                                <Rating rating={logement.rating} />
+                            </div>
+                        </section>
+                        <div className="logement__secondary-information">
+                            <Collapse
+                                id={logementId}
+                                title="Description"
+                                description={logement.description.split()}
+                            />
+                            <Collapse
+                                id={logementId}
+                                title="Equipements"
+                                description={logement.equipments}
+                            />
                         </div>
-                        <div>
-                            <Host host={logement.host} />
-                            <Rating rating={logement.rating} />
-                        </div>
-                    </section>
-                    <div className="logement__secondary-information">
-                        <Collapse
-                            id={logementId}
-                            title="Description"
-                            description={logement.description.split()}
-                        />
-                        <Collapse
-                            id={logementId}
-                            title="Equipements"
-                            description={logement.equipments}
-                        />
-                    </div>
-                </main>
-            </Layout>
+                    </main>
+                </Layout>
+                <Footer />
+            </div>
         )
     )
 }
