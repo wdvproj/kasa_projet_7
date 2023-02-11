@@ -26,7 +26,7 @@ function Logement() {
             }
         }
         if (!knownId) {
-            return navigate('/error') // Retour vers la page d'erreur
+            navigate('/error') // Retour vers la page d'erreur lorsque l'identifiant est inconnu
         }
     }, [logementId, logements, navigate])
 
