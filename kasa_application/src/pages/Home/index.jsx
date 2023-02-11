@@ -20,11 +20,7 @@ function Home() {
                     <section className="home__cards">
                         {logements.map(({ id, title, cover }) => (
                             <Link key={`link-${id}`} to={`/logement/${id}`}>
-                                <Card
-                                    key={`card-${id}`}
-                                    title={title}
-                                    cover={cover}
-                                />
+                                <Card title={title} cover={cover} />
                             </Link>
                         ))}
                     </section>
