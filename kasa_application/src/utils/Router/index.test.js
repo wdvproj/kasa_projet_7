@@ -11,7 +11,7 @@ describe('Error handling', () => {
         const router = createMemoryRouter(
             [
                 {
-                    path: '/about',
+                    path: '/apropos',
                     element: <About />,
                 },
                 {
@@ -20,7 +20,7 @@ describe('Error handling', () => {
                 },
             ],
             {
-                initialEntries: ['/abou'],
+                initialEntries: ['/apropo'],
             }
         )
 

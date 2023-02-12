@@ -10,7 +10,7 @@ function Router() {
             path: '/',
             element: <Home />,
             loader: () => {
-                return fetch('../../../datas/logements.json')
+                return fetch('/datas/logements.json')
             },
             errorElement: <Error />,
         },
@@ -18,11 +18,11 @@ function Router() {
             path: '/logement/:logementId',
             element: <Logement />,
             loader: () => {
-                return fetch('../../../datas/logements.json')
+                return fetch('/datas/logements.json')
             },
             errorElement: <Error />,
         },
-        { path: '/about', element: <About /> },
+        { path: '/apropos', element: <About /> },
         { path: '*', element: <Error /> },
     ])
     return <RouterProvider router={router} />

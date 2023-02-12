@@ -17,7 +17,7 @@ function Header() {
                     Accueil
                 </NavLink>
                 <NavLink
-                    to="/about"
+                    to="/apropos"
                     style={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }
