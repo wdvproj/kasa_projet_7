@@ -3,7 +3,7 @@ import Collapse from './index.jsx'
 
 describe('Collapse', () => {
     it('open then close', () => {
-        render(<Collapse title="Service" description="Good services" />)
+        render(<Collapse title="Service" description={['Good services']} />)
 
         const title = screen.getByText('Service')
         const chevron = screen.getByRole('img')
@@ -11,7 +11,7 @@ describe('Collapse', () => {
         expect(chevron.getAttribute('src')).toBe('chevron_down.svg')
         // Au clic sur l'icône chevronDown, l'icône chevronUp apparaît ainsi que la description
         fireEvent.click(title)
-        let description = screen.queryByText('Good services')
+        let description = screen.getByRole('list')
         expect(chevron.getAttribute('src')).toBe('chevron_up.svg')
         expect(description.textContent).toBe('Good services')
 
