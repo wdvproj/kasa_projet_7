@@ -7,7 +7,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 25px 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .home__banner > h1 {
@@ -22,7 +23,7 @@
     margin: 0px;
     text-align: center;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 500;
     line-height: 68px;
 }
@@ -33,7 +34,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 40px 0px;
-    margin: 20px 0px;
+    margin: 0px;
     border-radius: 25px;
     background-color: #f7f7f7;
     color: #ffffff;
@@ -54,12 +55,13 @@
 
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
-    .home__banner {
-        margin: 15px 0px;
-    }
-
     .home__banner > div {
         height: 111px;
+    }
+
+    .home__banner {
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
 
     .home__banner > h1 {
@@ -72,7 +74,6 @@
 
     .home__cards {
         padding: 0px;
-        margin: 0px;
         border-radius: 0px;
         background-color: #ffffff;
     }

@@ -9,6 +9,14 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 142.6%;
+    line-height: 34px;
     font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+        line-height: 17px;
+    }
 }

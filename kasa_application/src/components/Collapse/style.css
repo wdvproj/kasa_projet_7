@@ -15,12 +15,17 @@
     position: relative;
     top: 10px;
     margin: 0px;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 30px 10px 20px;
     border-radius: 10px;
     background-color: #ff6060;
     color: #ffffff;
     font: inherit;
     cursor: pointer;
+}
+
+.section__title > img {
+    width: 15px;
+    height: 25px;
 }
 
 .section__content {
@@ -42,9 +47,13 @@
         line-height: 18px;
     }
 
+    .section__title > img {
+        width: 9px;
+        height: 15px;
+    }
+
     .section__content {
+        padding: 20px 10px 0px 10px;
         border-radius: 0px 0px 5px 5px;
-        font-size: 12px;
-        line-height: 17px;
     }
 }

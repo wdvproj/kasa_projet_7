@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 300px;
     height: 300px;
-    margin: 35px 10px;
+    margin: 40px 10px;
     padding: 10px;
     border-radius: 10px;
     background: linear-gradient(
@@ -13,8 +13,6 @@
         rgba(0, 0, 0, 0.5) 100%
     );
     background-color: #ff6060;
-    font-size: 18px;
-    line-height: 26px;
 }
 
 .card__picture {
@@ -26,6 +24,8 @@
 
 .card__title {
     width: 45%;
+    font-size: 18px;
+    line-height: 26px;
 }
 
 /* Responsive mobile */

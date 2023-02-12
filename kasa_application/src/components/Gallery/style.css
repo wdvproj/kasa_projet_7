@@ -51,6 +51,7 @@
 @media screen and (max-width: 768px) {
     .gallery {
         height: 255px;
+        margin-bottom: 5px;
         border-radius: 10px;
     }
 
@@ -71,7 +72,7 @@
         padding-right: 5px;
     }
 
-    .gallery__pages {
+    .gallery__pictures {
         display: none;
     }
 }
