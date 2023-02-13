@@ -59,8 +59,18 @@
     line-height: 26px;
 }
 
-.logement__secondary-information ul,
-p {
+.logement__secondary-information ul {
+    height: 249px;
+    padding: 30px 15px 0px 15px;
+    margin: 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #f7f7f7;
+    font-weight: 400;
+    list-style-type: none;
+    overflow: auto;
+}
+
+.logement__secondary-information p {
     height: 249px;
     padding: 30px 15px 0px 15px;
     margin: 0px;
@@ -110,8 +120,13 @@ p {
         width: 100%;
     }
 
-    .logement__secondary-information ul,
-    p {
+    .logement__secondary-information ul {
+        height: fit-content;
+        padding: 20px 10px 0px 10px;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .logement__secondary-information p {
         height: fit-content;
         padding: 20px 10px 0px 10px;
         border-radius: 0px 0px 5px 5px;
