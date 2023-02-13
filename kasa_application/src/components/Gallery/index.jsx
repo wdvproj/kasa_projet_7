@@ -6,16 +6,24 @@ import chevronRight from '../../assets/images/chevron_right.svg'
 function Gallery({ pictures }) {
     const [picture, displayNextPicture] = useState(0)
 
+    function displayPreviousPicture() {
+        picture === 0
+            ? displayNextPicture(pictures.length - 1)
+            : displayNextPicture(picture - 1)
+    }
+
+    function displayNextOnePicture() {
+        picture === pictures.length - 1
+            ? displayNextPicture(0)
+            : displayNextPicture(picture + 1)
+    }
+
     return (
         <div className="gallery">
             {pictures.length > 1 && (
                 <span
                     className="gallery__button gallery__button--left"
-                    onClick={() =>
-                        picture === 0
-                            ? displayNextPicture(pictures.length - 1)
-                            : displayNextPicture(picture - 1)
-                    }
+                    onClick={() => displayPreviousPicture()}
                 >
                     <img src={chevronLeft} alt="Précédente" />
                 </span>
@@ -32,11 +40,7 @@ function Gallery({ pictures }) {
             {pictures.length > 1 && (
                 <span
                     className="gallery__button gallery__button--right"
-                    onClick={() =>
-                        picture === pictures.length - 1
-                            ? displayNextPicture(0)
-                            : displayNextPicture(picture + 1)
-                    }
+                    onClick={() => displayNextOnePicture()}
                 >
                     <img src={chevronRight} alt="Suivante" />
                 </span>
