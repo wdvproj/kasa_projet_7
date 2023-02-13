@@ -4,6 +4,10 @@
     font-weight: 500;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #ff6060;
     font-style: normal;

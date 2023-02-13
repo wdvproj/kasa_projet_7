@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './utils/style/normalize.css'
 import './utils/style/style.css'
 import Router from './utils/Router'
 
