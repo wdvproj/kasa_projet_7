@@ -55,16 +55,25 @@ function Logement() {
                             </div>
                         </section>
                         <div className="logement__secondary-information">
-                            <Collapse
-                                id={logementId}
-                                title="Description"
-                                description={logement.description.split()}
-                            />
-                            <Collapse
-                                id={logementId}
-                                title="Equipements"
-                                description={logement.equipments}
-                            />
+                            <Collapse id={logementId} title="Description">
+                                <p>{logement.description}</p>
+                            </Collapse>
+                            <Collapse id={logementId} title="Equipements">
+                                <ul className="section__content">
+                                    {logement.equipments.map(
+                                        (equipment, index) => (
+                                            <li
+                                                key={`${equipment.slice(
+                                                    0,
+                                                    10
+                                                )}-${index}`}
+                                            >
+                                                {equipment}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </Collapse>
                         </div>
                     </main>
                 </Layout>

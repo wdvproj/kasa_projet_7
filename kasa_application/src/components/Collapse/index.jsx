@@ -3,7 +3,7 @@ import './style.css'
 import chevronDown from '../../assets/images/chevron_down.svg'
 import chevronUp from '../../assets/images/chevron_up.svg'
 
-function Collapse({ title, description }) {
+function Collapse({ title, children }) {
     const [isCollapseOpen, openCollapse] = useState(false)
 
     return isCollapseOpen ? (
@@ -13,12 +13,7 @@ function Collapse({ title, description }) {
 
                 <img src={chevronUp} alt="Fermer le contenu" />
             </h2>
-
-            <ul className="section__content">
-                {description.map((content, index) => (
-                    <li key={`${content.slice(0, 10)}-${index}`}>{content}</li>
-                ))}
-            </ul>
+            {children}
         </section>
     ) : (
         <section className="section">

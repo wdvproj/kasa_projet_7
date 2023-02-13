@@ -36,11 +36,9 @@ function About() {
                     <Banner picture={photo} />
                     <div className="about__sections">
                         {sections.map(({ title, description }, index) => (
-                            <Collapse
-                                key={`${title}-${index}`}
-                                title={title}
-                                description={description.split()}
-                            />
+                            <Collapse key={`${title}-${index}`} title={title}>
+                                <p>{description}</p>
+                            </Collapse>
                         ))}
                     </div>
                 </main>

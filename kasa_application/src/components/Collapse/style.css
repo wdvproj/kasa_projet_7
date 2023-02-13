@@ -28,15 +28,6 @@
     height: 25px;
 }
 
-.section__content {
-    padding: 30px 15px 0px 15px;
-    margin: 0px;
-    border-radius: 0px 0px 10px 10px;
-    background-color: #f7f7f7;
-    font-weight: 400;
-    list-style-type: none;
-}
-
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
     .section__title {
@@ -50,10 +41,5 @@
     .section__title > img {
         width: 9px;
         height: 15px;
-    }
-
-    .section__content {
-        padding: 20px 10px 0px 10px;
-        border-radius: 0px 0px 5px 5px;
     }
 }

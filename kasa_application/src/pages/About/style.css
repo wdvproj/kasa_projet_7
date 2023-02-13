@@ -8,13 +8,23 @@
     margin: 10px 100px;
 }
 
+.about__sections p {
+    padding: 30px 15px 0px 15px;
+    margin: 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #f7f7f7;
+    font-weight: 400;
+}
+
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
     .about__sections {
         margin: 10px 0px;
     }
 
-    .about__sections ul {
+    .about__sections p {
         height: 143px;
+        padding: 20px 10px 0px 10px;
+        border-radius: 0px 0px 5px 5px;
     }
 }
